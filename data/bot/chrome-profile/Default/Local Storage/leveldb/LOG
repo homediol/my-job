@@ -1,9 +1,0 @@
-2026/06/14-20:15:54.327 20da5 Reusing MANIFEST /home/diolo/Desktop/winner predict/data/bot/chrome-profile/Default/Local Storage/leveldb/MANIFEST-000001
-2026/06/14-20:15:54.349 20da5 Recovering log #145
-2026/06/14-20:15:54.352 20da5 Reusing old log /home/diolo/Desktop/winner predict/data/bot/chrome-profile/Default/Local Storage/leveldb/000145.log 
-2026/06/14-20:16:35.711 20da8 Level-0 table #149: started
-2026/06/14-20:16:35.997 20da8 Level-0 table #149: 775110 bytes OK
-2026/06/14-20:16:36.106 20da8 Delete type=0 #145
-2026/06/14-20:16:54.358 20da8 Level-0 table #151: started
-2026/06/14-20:16:54.442 20da8 Level-0 table #151: 183650 bytes OK
-2026/06/14-20:16:54.490 20da8 Delete type=0 #148

@@ -1,10 +1,10 @@
 {
-  "status": "preparing_monitor",
+  "status": "stopped",
   "phone": "783752954",
   "headless": false,
   "pid": 134466,
   "started_at": "2026-06-14T09:15:52.673Z",
-  "updated_at": "2026-06-14T09:16:31.836Z",
+  "updated_at": "2026-06-14T09:23:37.519Z",
   "rounds_seen": 0,
   "last_round": null,
   "error": null,
@@ -78,6 +78,13 @@
       "status": "running",
       "details": "Preparing monitoring loop",
       "timestamp": "2026-06-14T09:16:31.836Z"
+    },
+    {
+      "step": 11,
+      "action": "Bot stopped",
+      "status": "success",
+      "details": "Bot stopped",
+      "timestamp": "2026-06-14T09:23:37.520Z"
     }
   ],
   "step_details": "Preparing...",
