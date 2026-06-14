@@ -1,6 +1,6 @@
-# Aviator Prediction System
 
-Full-stack Aviator multiplier prediction demo:
+
+
 
 - Python Flask API
 - TensorFlow/Keras LSTM classifier
@@ -8,7 +8,7 @@ Full-stack Aviator multiplier prediction demo:
 - React, Tailwind CSS, Axios dashboard
 - `roundhistory.json` input and `decisions.json` output
 
-This is an ML engineering project, not a guarantee of future gambling outcomes. Crash-style games are high variance and can be non-predictive depending on the source system.
+
 
 ## Project Structure
 
