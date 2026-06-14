@@ -1,0 +1,85 @@
+{
+  "status": "preparing_monitor",
+  "phone": "783752954",
+  "headless": false,
+  "pid": 134466,
+  "started_at": "2026-06-14T09:15:52.673Z",
+  "updated_at": "2026-06-14T09:16:31.836Z",
+  "rounds_seen": 0,
+  "last_round": null,
+  "error": null,
+  "steps": [
+    {
+      "step": 1,
+      "action": "Starting bot",
+      "status": "running",
+      "details": "Starting bot",
+      "timestamp": "2026-06-14T09:15:52.673Z"
+    },
+    {
+      "step": 2,
+      "action": "Launching browser session",
+      "status": "running",
+      "details": "Launching browser session",
+      "timestamp": "2026-06-14T09:15:52.701Z"
+    },
+    {
+      "step": 3,
+      "action": "Browser ready",
+      "status": "success",
+      "details": "Browser ready",
+      "timestamp": "2026-06-14T09:15:55.039Z"
+    },
+    {
+      "step": 4,
+      "action": "Opening browser page",
+      "status": "running",
+      "details": "Opening browser page",
+      "timestamp": "2026-06-14T09:15:55.040Z"
+    },
+    {
+      "step": 5,
+      "action": "Page tab ready",
+      "status": "running",
+      "details": "Page tab ready",
+      "timestamp": "2026-06-14T09:15:55.057Z"
+    },
+    {
+      "step": 6,
+      "action": "Checking login state",
+      "status": "running",
+      "details": "Checking login state",
+      "timestamp": "2026-06-14T09:15:55.101Z"
+    },
+    {
+      "step": 7,
+      "action": "Login successful",
+      "status": "success",
+      "details": "Login successful",
+      "timestamp": "2026-06-14T09:16:21.772Z"
+    },
+    {
+      "step": 8,
+      "action": "Navigating to Aviator game",
+      "status": "running",
+      "details": "Navigating to Aviator game",
+      "timestamp": "2026-06-14T09:16:21.798Z"
+    },
+    {
+      "step": 9,
+      "action": "Aviator page loaded",
+      "status": "success",
+      "details": "Aviator page loaded",
+      "timestamp": "2026-06-14T09:16:31.737Z"
+    },
+    {
+      "step": 10,
+      "action": "Preparing monitoring loop",
+      "status": "running",
+      "details": "Preparing monitoring loop",
+      "timestamp": "2026-06-14T09:16:31.836Z"
+    }
+  ],
+  "step_details": "Preparing...",
+  "aviator_url": "https://winner.rw/en/virtual/crash-games/aviator"
+}

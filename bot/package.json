@@ -1,0 +1,17 @@
+{
+  "name": "aviator-bot",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Playwright (Node.js) automation bot for Aviator game",
+  "type": "module",
+  "main": "runner.js",
+  "scripts": {
+    "start": "node runner.js",
+    "test": "node runner.js --dry-run"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

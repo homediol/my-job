@@ -1,0 +1,1445 @@
+[17:07:28] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:07:28] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:07:28] [runner] [INFO] Launching browser...
+[17:07:28] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:07:28] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:07:32] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:07:33] [login] [INFO] Checking existing session...
+[17:07:33] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:07:33] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:08:03] [browser] [WARN] Navigation attempt 1 timed out for https://winner.rw
+[17:08:03] [browser] [INFO] Waiting 3000ms before retry...
+[17:08:06] [browser] [INFO] Navigating to: https://winner.rw (attempt 2, wait=domcontentloaded)
+[17:08:27] [browser] [WARN] Navigation attempt 2 timed out for https://winner.rw
+[17:08:27] [browser] [INFO] Waiting 6000ms before retry...
+[17:08:33] [browser] [INFO] Navigating to: https://winner.rw (attempt 3, wait=commit)
+[17:09:03] [browser] [WARN] Navigation attempt 3 timed out for https://winner.rw
+[17:09:03] [browser] [ERROR] All navigation attempts failed for https://winner.rw
+[17:09:03] [login] [WARN] Could not load homepage — will attempt login anyway
+  ℹ No active session detected — proceeding to login
+
+STEP 8
+Action: Performing login
+Status: running
+Details: Authenticating as *****2954 via homepage LOGIN link
+[17:09:03] [login] [INFO] Not on login page — navigating via homepage LOGIN link...
+[17:09:03] [login] [INFO] Navigating to homepage to click "LOGIN" link...
+[17:09:03] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:09:33] [browser] [WARN] Navigation attempt 1 timed out for https://winner.rw
+[17:09:33] [browser] [INFO] Waiting 3000ms before retry...
+[17:09:36] [browser] [INFO] Navigating to: https://winner.rw (attempt 2, wait=domcontentloaded)
+[17:09:58] [runner] [INFO] Shutting down bot...
+[17:09:58] [browser] [ERROR] Navigation failed to https://winner.rw (attempt 2/3): page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://winner.rw/", waiting until "domcontentloaded"[22m
+
+[17:09:58] [browser] [INFO] Waiting 6000ms before retry...
+[17:09:58] [runner] [ERROR] Authentication error: page.waitForTimeout: Target page, context or browser has been closed
+
+STEP 9
+Action: Authentication check
+Status: failed
+Details: Error during session check or login: page.waitForTimeout: Target page, context or browser has been closed
+
+[17:09:58] [browser] [INFO] Browser context closed
+[17:09:58] [browser] [INFO] Browser process terminated
+[17:09:58] [browser] [INFO] Browser resources released
+[17:09:58] [runner] [INFO] Bot terminated.
+[17:10:50] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:10:50] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:10:50] [runner] [INFO] Launching browser...
+[17:10:50] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:10:50] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:10:54] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:10:56] [login] [INFO] Checking existing session...
+[17:10:56] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:10:56] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:11:06] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[17:11:07] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:11:16] [login] [INFO] Dashboard signal found: "[class*="user-menu"]" is visible
+[17:11:17] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, confidence=high
+[17:11:17] [login] [INFO] Session is valid — dashboard elements detected on homepage
+  ✔ Dashboard elements detected — user is authenticated
+
+STEP 8
+Action: Checking login state
+Status: success
+Details: User is already authenticated, skipping login page entirely
+
+
+STEP 9
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[17:11:18] [runner] [INFO] Navigating to Aviator game...
+[17:11:18] [login] [INFO] Navigating to Aviator game...
+[17:11:18] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[17:11:18] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[17:11:22] [login] [INFO] Waiting for game canvas to initialize...
+[17:11:27] [login] [WARN] Unexpected URL after navigation: https://winner.rw/en/authentication/login
+  ✔ Aviator page loaded: https://winner.rw/en/authentication/login
+
+STEP 10
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/authentication/login
+
+
+STEP 11
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[17:11:27] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [17:12:16] [runner] [INFO] Shutting down bot...
+[17:12:16] [browser] [INFO] Browser context closed
+[17:12:16] [browser] [INFO] Browser process terminated
+[17:12:16] [browser] [INFO] Browser resources released
+[17:12:16] [runner] [INFO] Bot terminated.
+[17:12:31] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:12:31] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:12:31] [runner] [INFO] Launching browser...
+[17:12:31] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:12:31] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:12:35] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:12:37] [login] [INFO] Checking existing session...
+[17:12:37] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:12:37] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:12:54] [browser] [INFO] Page loaded: https://winner.rw/sportsbook/upcoming
+[17:12:54] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:12:56] [login] [INFO] Dashboard signal found: "[class*="user-menu"]" is visible
+[17:12:57] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, confidence=high
+[17:12:57] [login] [INFO] Session is valid — dashboard elements detected on homepage
+  ✔ Dashboard elements detected — user is authenticated
+
+STEP 8
+Action: Checking login state
+Status: success
+Details: User is already authenticated, skipping login page entirely
+
+
+STEP 9
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[17:12:57] [runner] [INFO] Navigating to Aviator game...
+[17:12:57] [login] [INFO] Navigating to Aviator game...
+[17:12:57] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[17:12:57] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[17:13:07] [login] [INFO] Waiting for game canvas to initialize...
+[17:13:12] [login] [WARN] Unexpected URL after navigation: https://winner.rw/en/authentication/login
+  ✔ Aviator page loaded: https://winner.rw/en/authentication/login
+
+STEP 10
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/authentication/login
+
+
+STEP 11
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[17:13:12] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [17:18:39] [runner] [INFO] Shutting down bot...
+[17:18:39] [browser] [INFO] Browser context closed
+[17:18:39] [browser] [INFO] Browser process terminated
+[17:18:39] [browser] [INFO] Browser resources released
+[17:18:39] [runner] [INFO] Bot terminated.
+[17:18:48] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:18:48] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:18:48] [runner] [INFO] Launching browser...
+[17:18:48] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:18:48] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:18:55] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:18:58] [login] [INFO] Checking existing session...
+[17:18:58] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:18:58] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:19:10] [browser] [INFO] Page loaded: https://winner.rw/sportsbook/upcoming
+[17:19:10] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:19:11] [login] [INFO] Login link signal found: "a#user-menu-login, a.login-btn, a[href*="/login"]" is visible
+[17:19:11] [login] [INFO] Page state: loginPage=false, dashboard=false, loginForm=false, loginLink=true, confidence=medium
+[17:19:11] [login] [INFO] Login entry detected on homepage — session is not active
+  ℹ No active session detected — proceeding to login
+
+STEP 8
+Action: Performing login
+Status: running
+Details: Authenticating as *****2954 via homepage LOGIN link
+[17:19:11] [login] [INFO] Not on login page — navigating via homepage LOGIN link...
+[17:19:11] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:19:11] [login] [INFO] Clicking "LOGIN" link: en/authentication/login
+[17:19:16] [login] [INFO] Phone input found and visible
+[17:19:16] [login] [INFO] Password input found and visible
+[17:19:16] [login] [INFO] Login button found and visible
+[17:19:16] [login] [INFO] Phone field filled
+[17:19:16] [login] [INFO] Password field filled
+[17:19:17] [login] [INFO] Login button clicked
+[17:19:17] [login] [INFO] Waiting for post-login navigation...
+[17:19:21] [login] [INFO] Login successful. Post-login URL: https://winner.rw/sportsbook/upcoming
+  ✔ Authentication successful
+
+STEP 9
+Action: Performing login
+Status: success
+Details: Logged in successfully
+
+
+STEP 10
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[17:19:21] [runner] [INFO] Navigating to Aviator game...
+[17:19:21] [login] [INFO] Navigating to Aviator game...
+[17:19:21] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[17:19:24] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[17:19:30] [login] [INFO] Waiting for game canvas to initialize...
+[17:19:35] [login] [INFO] Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+  ✔ Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+
+STEP 11
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/virtual/crash-games/aviator
+
+
+STEP 12
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[17:19:35] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [17:20:13] [runner] [INFO] Shutting down bot...
+[17:20:13] [browser] [INFO] Browser context closed
+[17:20:13] [browser] [INFO] Browser process terminated
+[17:20:13] [browser] [INFO] Browser resources released
+[17:20:13] [runner] [INFO] Bot terminated.
+[17:20:44] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:20:44] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:20:44] [runner] [INFO] Launching browser...
+[17:20:44] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:20:44] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:20:48] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:20:48] [login] [INFO] Checking existing session...
+[17:20:48] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:20:48] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:20:53] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[17:21:16] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:21:18] [login] [INFO] Dashboard signal found: "[class*="balance"]" is visible
+[17:21:18] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, loginLink=false, confidence=high
+[17:21:18] [login] [INFO] Session is valid — dashboard elements detected on homepage
+  ✔ Dashboard elements detected — user is authenticated
+
+STEP 8
+Action: Checking login state
+Status: success
+Details: User is already authenticated, skipping login page entirely
+
+
+STEP 9
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[17:21:20] [runner] [INFO] Navigating to Aviator game...
+[17:21:20] [login] [INFO] Navigating to Aviator game...
+[17:21:20] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[17:21:20] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[17:21:24] [login] [INFO] Waiting for game canvas to initialize...
+[17:21:31] [login] [INFO] Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+  ✔ Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+
+STEP 10
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/virtual/crash-games/aviator
+
+
+STEP 11
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[17:21:31] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [17:43:01] [runner] [INFO] Shutting down bot...
+[17:43:12] [browser] [INFO] Browser context closed
+[17:43:12] [browser] [INFO] Browser process terminated
+[17:43:12] [browser] [INFO] Browser resources released
+[17:43:12] [runner] [INFO] Bot terminated.
+[17:47:31] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:47:33] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:47:33] [runner] [INFO] Launching browser...
+[17:47:35] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:47:35] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:47:51] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:47:54] [login] [INFO] Checking existing session...
+[17:47:54] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:47:54] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:48:24] [browser] [WARN] Navigation attempt 1 timed out for https://winner.rw
+[17:48:24] [browser] [INFO] Waiting 3000ms before retry...
+[17:48:27] [browser] [INFO] Navigating to: https://winner.rw (attempt 2, wait=domcontentloaded)
+[17:48:38] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[17:48:38] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:48:53] [login] [WARN] Navigation elements did not appear within timeout — page may not have rendered fully
+[17:48:54] [login] [INFO] No clear login state signals found on current page
+[17:48:54] [login] [INFO] Page state: loginPage=false, dashboard=false, loginForm=false, loginLink=false, confidence=low
+[17:48:54] [login] [INFO] No dashboard detected — clicking LOGIN link to check session...
+[17:48:54] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:48:54] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:48:54] [login] [WARN] Could not definitively determine login state — assuming not logged in
+  ℹ No active session detected — proceeding to login
+
+STEP 8
+Action: Performing login
+Status: running
+Details: Authenticating as *****2954 via homepage LOGIN link
+[17:48:54] [login] [INFO] Not on login page — navigating via homepage LOGIN link...
+[17:48:54] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:48:54] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:48:54] [login] [WARN] Could not click LOGIN link — trying direct navigation...
+[17:48:54] [browser] [INFO] Navigating to: https://winner.rw/en/authentication/login (attempt 1, wait=load)
+[17:48:56] [browser] [INFO] Page loaded: https://winner.rw/en/authentication/login
+[17:48:56] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:49:28] [login] [WARN] Login form elements did not render within timeout
+[17:49:29] [login] [WARN] Phone input (#phoneInput) not found on page — checking if already logged in...
+[17:49:30] [login] [INFO] Page state: loginPage=true, dashboard=false, loginForm=false, loginLink=false, confidence=medium
+[17:49:30] [login] [ERROR] Phone input (#phoneInput) not found and not logged in
+[17:49:30] [runner] [ERROR] Login failed — aborting
+
+STEP 9
+Action: Performing login
+Status: failed
+Details: Credentials rejected or login form not accessible
+
+[17:49:32] [runner] [INFO] Shutting down bot...
+[17:49:42] [browser] [INFO] Browser context closed
+[17:49:42] [browser] [INFO] Browser process terminated
+[17:49:42] [browser] [INFO] Browser resources released
+[17:49:42] [runner] [INFO] Bot terminated.
+[17:49:51] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:49:53] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:49:55] [runner] [INFO] Launching browser...
+[17:49:56] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:49:56] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:50:10] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:50:15] [login] [INFO] Checking existing session...
+[17:50:15] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:50:15] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:50:18] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[17:50:18] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:50:33] [login] [WARN] Navigation elements did not appear within timeout — page may not have rendered fully
+[17:50:34] [login] [INFO] No clear login state signals found on current page
+[17:50:34] [login] [INFO] Page state: loginPage=false, dashboard=false, loginForm=false, loginLink=false, confidence=low
+[17:50:34] [login] [INFO] No dashboard detected — clicking LOGIN link to check session...
+[17:50:34] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:50:34] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:50:34] [login] [WARN] Could not definitively determine login state — assuming not logged in
+  ℹ No active session detected — proceeding to login
+
+STEP 8
+Action: Performing login
+Status: running
+Details: Authenticating as *****2954 via homepage LOGIN link
+[17:50:34] [login] [INFO] Not on login page — navigating via homepage LOGIN link...
+[17:50:34] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:50:34] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:50:34] [login] [WARN] Could not click LOGIN link — trying direct navigation...
+[17:50:34] [browser] [INFO] Navigating to: https://winner.rw/en/authentication/login (attempt 1, wait=load)
+[17:50:36] [browser] [INFO] Page loaded: https://winner.rw/en/authentication/login
+[17:50:36] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:51:08] [login] [WARN] Login form elements did not render within timeout
+[17:51:10] [login] [WARN] Phone input (#phoneInput) not found on page — checking if already logged in...
+[17:51:10] [login] [INFO] Page state: loginPage=true, dashboard=false, loginForm=false, loginLink=false, confidence=medium
+[17:51:10] [login] [ERROR] Phone input (#phoneInput) not found and not logged in
+[17:51:10] [runner] [ERROR] Login failed — aborting
+
+STEP 9
+Action: Performing login
+Status: failed
+Details: Credentials rejected or login form not accessible
+
+[17:51:16] [runner] [INFO] Shutting down bot...
+[17:51:20] [browser] [INFO] Browser context closed
+[17:51:20] [browser] [INFO] Browser process terminated
+[17:51:20] [browser] [INFO] Browser resources released
+[17:51:20] [runner] [INFO] Bot terminated.
+[17:51:28] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:51:28] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:51:28] [runner] [INFO] Launching browser...
+[17:51:28] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:51:28] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:51:33] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:51:34] [login] [INFO] Checking existing session...
+[17:51:34] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:51:34] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:51:44] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[17:51:44] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:51:59] [login] [WARN] Navigation elements did not appear within timeout — page may not have rendered fully
+[17:52:01] [login] [INFO] No clear login state signals found on current page
+[17:52:01] [login] [INFO] Page state: loginPage=false, dashboard=false, loginForm=false, loginLink=false, confidence=low
+[17:52:01] [login] [INFO] No dashboard detected — clicking LOGIN link to check session...
+[17:52:01] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:52:01] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:52:01] [login] [WARN] Could not definitively determine login state — assuming not logged in
+  ℹ No active session detected — proceeding to login
+
+STEP 8
+Action: Performing login
+Status: running
+Details: Authenticating as *****2954 via homepage LOGIN link
+[17:52:01] [login] [INFO] Not on login page — navigating via homepage LOGIN link...
+[17:52:01] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:52:01] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:52:01] [login] [WARN] Could not click LOGIN link — trying direct navigation...
+[17:52:01] [browser] [INFO] Navigating to: https://winner.rw/en/authentication/login (attempt 1, wait=load)
+[17:52:06] [browser] [INFO] Page loaded: https://winner.rw/en/authentication/login
+[17:52:06] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:52:38] [login] [WARN] Login form elements did not render within timeout
+[17:52:39] [login] [WARN] Phone input (#phoneInput) not found on page — checking if already logged in...
+[17:52:39] [login] [INFO] Page state: loginPage=true, dashboard=false, loginForm=false, loginLink=false, confidence=medium
+[17:52:39] [login] [ERROR] Phone input (#phoneInput) not found and not logged in
+[17:52:39] [runner] [ERROR] Login failed — aborting
+
+STEP 9
+Action: Performing login
+Status: failed
+Details: Credentials rejected or login form not accessible
+
+[17:52:39] [runner] [INFO] Shutting down bot...
+[17:52:44] [browser] [INFO] Browser context closed
+[17:52:44] [browser] [INFO] Browser process terminated
+[17:52:44] [browser] [INFO] Browser resources released
+[17:52:44] [runner] [INFO] Bot terminated.
+[17:52:56] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:52:56] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:52:56] [runner] [INFO] Launching browser...
+[17:52:56] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:52:56] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:53:03] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:53:09] [login] [INFO] Checking existing session...
+[17:53:09] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:53:09] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:53:13] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[17:53:13] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:53:28] [login] [WARN] Navigation elements did not appear within timeout — page may not have rendered fully
+[17:53:29] [login] [INFO] No clear login state signals found on current page
+[17:53:29] [login] [INFO] Page state: loginPage=false, dashboard=false, loginForm=false, loginLink=false, confidence=low
+[17:53:29] [login] [INFO] No dashboard detected — clicking LOGIN link to check session...
+[17:53:29] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:53:29] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:53:29] [login] [WARN] Could not definitively determine login state — assuming not logged in
+  ℹ No active session detected — proceeding to login
+
+STEP 8
+Action: Performing login
+Status: running
+Details: Authenticating as *****2954 via homepage LOGIN link
+[17:53:29] [login] [INFO] Not on login page — navigating via homepage LOGIN link...
+[17:53:29] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:53:29] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:53:29] [login] [WARN] Could not click LOGIN link — trying direct navigation...
+[17:53:29] [browser] [INFO] Navigating to: https://winner.rw/en/authentication/login (attempt 1, wait=load)
+[17:53:30] [browser] [INFO] Page loaded: https://winner.rw/en/authentication/login
+[17:53:30] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:54:02] [login] [WARN] Login form elements did not render within timeout
+[17:54:03] [login] [WARN] Phone input (#phoneInput) not found on page — checking if already logged in...
+[17:54:03] [login] [INFO] Page state: loginPage=true, dashboard=false, loginForm=false, loginLink=false, confidence=medium
+[17:54:03] [login] [ERROR] Phone input (#phoneInput) not found and not logged in
+[17:54:03] [runner] [ERROR] Login failed — aborting
+
+STEP 9
+Action: Performing login
+Status: failed
+Details: Credentials rejected or login form not accessible
+
+[17:54:04] [runner] [INFO] Shutting down bot...
+[17:54:12] [browser] [INFO] Browser context closed
+[17:54:12] [browser] [INFO] Browser process terminated
+[17:54:12] [browser] [INFO] Browser resources released
+[17:54:12] [runner] [INFO] Bot terminated.
+[17:54:22] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[17:54:25] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[17:54:25] [runner] [INFO] Launching browser...
+[17:54:25] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[17:54:25] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[17:54:32] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[17:54:35] [login] [INFO] Checking existing session...
+[17:54:35] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[17:54:35] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[17:54:37] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[17:54:37] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:54:52] [login] [WARN] Navigation elements did not appear within timeout — page may not have rendered fully
+[17:54:53] [login] [INFO] No clear login state signals found on current page
+[17:54:53] [login] [INFO] Page state: loginPage=false, dashboard=false, loginForm=false, loginLink=false, confidence=low
+[17:54:53] [login] [INFO] No dashboard detected — clicking LOGIN link to check session...
+[17:54:53] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:54:53] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:54:53] [login] [WARN] Could not definitively determine login state — assuming not logged in
+  ℹ No active session detected — proceeding to login
+
+STEP 8
+Action: Performing login
+Status: running
+Details: Authenticating as *****2954 via homepage LOGIN link
+[17:54:53] [login] [INFO] Not on login page — navigating via homepage LOGIN link...
+[17:54:53] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[17:54:53] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[17:54:53] [login] [WARN] Could not click LOGIN link — trying direct navigation...
+[17:54:53] [browser] [INFO] Navigating to: https://winner.rw/en/authentication/login (attempt 1, wait=load)
+[17:54:54] [browser] [INFO] Page loaded: https://winner.rw/en/authentication/login
+[17:54:54] [browser] [INFO] Selector "body" found immediately via page.$()
+[17:55:26] [login] [WARN] Login form elements did not render within timeout
+[17:55:27] [login] [WARN] Phone input (#phoneInput) not found on page — checking if already logged in...
+[17:55:28] [login] [INFO] Page state: loginPage=true, dashboard=false, loginForm=false, loginLink=false, confidence=medium
+[17:55:28] [login] [ERROR] Phone input (#phoneInput) not found and not logged in
+[17:55:28] [runner] [ERROR] Login failed — aborting
+
+STEP 9
+Action: Performing login
+Status: failed
+Details: Credentials rejected or login form not accessible
+
+[17:55:28] [runner] [INFO] Shutting down bot...
+[17:55:29] [browser] [INFO] Browser context closed
+[17:55:29] [browser] [INFO] Browser process terminated
+[17:55:29] [browser] [INFO] Browser resources released
+[17:55:29] [runner] [INFO] Bot terminated.
+[18:00:39] [runner] [INFO] Starting bot for phone *****2954 (headless=true)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[18:00:39] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=true)
+[18:00:39] [runner] [INFO] Launching browser...
+[18:00:39] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[18:00:39] [browser] [INFO] Launching Chromium (headless=true, persistence=profile)
+[18:00:44] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[18:00:50] [login] [INFO] Checking existing session...
+[18:00:50] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[18:00:50] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[18:00:53] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[18:01:05] [browser] [INFO] Selector "body" found immediately via page.$()
+[18:01:10] [login] [INFO] Dashboard signal found: "[class*="balance"]" is visible
+[18:01:11] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, loginLink=false, confidence=high
+[18:01:11] [login] [INFO] Session is valid — dashboard elements detected on homepage
+  ✔ Dashboard elements detected — user is authenticated
+
+STEP 8
+Action: Checking login state
+Status: success
+Details: User is already authenticated, skipping login page entirely
+
+
+STEP 9
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[18:01:12] [runner] [INFO] Navigating to Aviator game...
+[18:01:12] [login] [INFO] Navigating to Aviator game...
+[18:01:12] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[18:01:12] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[18:01:27] [login] [INFO] Waiting for game canvas to initialize...
+[18:01:32] [login] [INFO] Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+  ✔ Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+
+STEP 10
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/virtual/crash-games/aviator
+
+
+STEP 11
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[18:01:33] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [18:03:40] [runner] [INFO] Shutting down bot...
+[18:03:40] [browser] [INFO] Browser context closed
+[18:03:40] [browser] [INFO] Browser process terminated
+[18:03:40] [browser] [INFO] Browser resources released
+[18:03:40] [runner] [INFO] Bot terminated.
+[18:04:11] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[18:04:13] [scraper] [INFO] History cleaned: 60 → 60 records (removed 0 duplicates)
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[18:04:13] [runner] [INFO] Launching browser...
+[18:04:14] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[18:04:14] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[18:04:26] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[18:04:31] [login] [INFO] Checking existing session...
+[18:04:31] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[18:04:31] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[18:05:01] [browser] [WARN] Navigation attempt 1 timed out for https://winner.rw
+[18:05:01] [browser] [INFO] Waiting 3000ms before retry...
+[18:05:04] [browser] [INFO] Navigating to: https://winner.rw (attempt 2, wait=domcontentloaded)
+[18:05:29] [browser] [INFO] Page loaded: https://winner.rw/sportsbook/upcoming
+[18:06:03] [browser] [INFO] Selector "body" found immediately via page.$()
+[18:06:05] [login] [INFO] Dashboard signal found: "[class*="balance"]" is visible
+[18:06:06] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, loginLink=false, confidence=high
+[18:06:06] [login] [INFO] Session is valid — dashboard elements detected on homepage
+  ✔ Dashboard elements detected — user is authenticated
+
+STEP 8
+Action: Checking login state
+Status: success
+Details: User is already authenticated, skipping login page entirely
+
+
+STEP 9
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[18:06:22] [runner] [INFO] Navigating to Aviator game...
+[18:06:22] [login] [INFO] Navigating to Aviator game...
+[18:06:22] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[18:06:22] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[18:06:26] [login] [INFO] Waiting for game canvas to initialize...
+[18:06:31] [login] [INFO] Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+  ✔ Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+
+STEP 10
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/virtual/crash-games/aviator
+
+
+STEP 11
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[18:06:37] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [19:19:17] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[19:19:17] [scraper] [INFO] History cleaned: 60 -> 60 records
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[19:19:17] [runner] [INFO] Launching browser...
+[19:19:17] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[19:19:17] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[19:19:24] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[19:19:31] [login] [INFO] Checking existing session...
+[19:19:31] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[19:19:31] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[19:19:49] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[19:19:53] [browser] [INFO] Selector "body" found immediately via page.$()
+[19:20:08] [login] [WARN] Navigation elements did not appear within timeout — page may not have rendered fully
+[19:20:09] [login] [INFO] No clear login state signals found on current page
+[19:20:09] [login] [INFO] Page state: loginPage=false, dashboard=false, loginForm=false, loginLink=false, confidence=low
+[19:20:09] [login] [INFO] No dashboard detected — clicking LOGIN link to check session...
+[19:20:09] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[19:20:09] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[19:20:09] [login] [WARN] Could not definitively determine login state — assuming not logged in
+  ℹ No active session detected — proceeding to login
+
+STEP 8
+Action: Performing login
+Status: running
+Details: Authenticating as *****2954 via homepage LOGIN link
+[19:20:09] [login] [INFO] Not on login page — navigating via homepage LOGIN link...
+[19:20:09] [login] [INFO] Already on winner.rw — looking for "LOGIN" link on current page
+[19:20:09] [login] [WARN] "LOGIN" link (a#user-menu-login, a.login-btn, a[href*="/login"]) not found — page may have loaded differently
+[19:20:09] [login] [WARN] Could not click LOGIN link — trying direct navigation...
+[19:20:09] [browser] [INFO] Navigating to: https://winner.rw/en/authentication/login (attempt 1, wait=load)
+[19:20:26] [browser] [INFO] Page loaded: https://winner.rw/sportsbook/upcoming
+[19:20:26] [browser] [INFO] Selector "body" found immediately via page.$()
+[19:20:58] [login] [WARN] Login form elements did not render within timeout
+[19:20:59] [login] [WARN] Phone input (#phoneInput) not found on page — checking if already logged in...
+[19:20:59] [login] [INFO] Dashboard signal found: "[class*="balance"]" is visible
+[19:20:59] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, loginLink=false, confidence=high
+[19:20:59] [login] [INFO] Already logged in — no login needed
+  ✔ Authentication successful
+
+STEP 9
+Action: Performing login
+Status: success
+Details: Logged in successfully
+
+
+STEP 10
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[19:20:59] [runner] [INFO] Navigating to Aviator game...
+[19:20:59] [login] [INFO] Navigating to Aviator game...
+[19:20:59] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[19:20:59] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[19:21:04] [login] [INFO] Waiting for game canvas to initialize...
+[19:21:09] [login] [INFO] Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+  ✔ Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+
+STEP 11
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/virtual/crash-games/aviator
+
+
+STEP 12
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[19:21:09] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [19:33:06] [runner] [INFO] Shutting down bot...
+[19:33:07] [browser] [INFO] Browser context closed
+[19:33:07] [browser] [INFO] Browser process terminated
+[19:33:07] [browser] [INFO] Browser resources released
+[19:33:07] [runner] [INFO] Bot terminated.
+[19:33:32] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[19:33:32] [scraper] [INFO] History cleaned: 60 -> 60 records
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[19:33:32] [runner] [INFO] Launching browser...
+[19:33:32] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[19:33:32] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[19:33:37] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[19:33:39] [login] [INFO] Checking existing session...
+[19:33:39] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[19:33:39] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[19:33:47] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[19:33:48] [browser] [INFO] Selector "body" found immediately via page.$()
+[19:33:57] [login] [INFO] Dashboard signal found: "[class*="balance"]" is visible
+[19:33:57] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, loginLink=false, confidence=high
+[19:33:57] [login] [INFO] Session is valid — dashboard elements detected on homepage
+  ✔ Dashboard elements detected — user is authenticated
+
+STEP 8
+Action: Checking login state
+Status: success
+Details: User is already authenticated, skipping login page entirely
+
+
+STEP 9
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[19:33:57] [runner] [INFO] Navigating to Aviator game...
+[19:33:57] [login] [INFO] Navigating to Aviator game...
+[19:33:57] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[19:33:57] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[19:34:02] [login] [INFO] Waiting for game canvas to initialize...
+[19:34:07] [login] [INFO] Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+  ✔ Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+
+STEP 10
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/virtual/crash-games/aviator
+
+
+STEP 11
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[19:34:07] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [19:42:12] [runner] [INFO] Shutting down bot...
+[19:42:12] [browser] [INFO] Browser context closed
+[19:42:12] [browser] [INFO] Browser process terminated
+[19:42:12] [browser] [INFO] Browser resources released
+[19:42:12] [runner] [INFO] Bot terminated.
+[19:42:39] [runner] [INFO] Starting bot for phone *****2954 (headless=true)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[19:42:39] [scraper] [INFO] History cleaned: 60 -> 60 records
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=true)
+[19:42:40] [runner] [INFO] Launching browser...
+[19:42:40] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[19:42:40] [browser] [INFO] Launching Chromium (headless=true, persistence=profile)
+[19:42:41] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[19:42:41] [login] [INFO] Checking existing session...
+[19:42:41] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[19:42:41] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[19:43:11] [browser] [WARN] Navigation attempt 1 timed out for https://winner.rw
+[19:43:11] [browser] [INFO] Waiting 3000ms before retry...
+[19:43:14] [browser] [INFO] Navigating to: https://winner.rw (attempt 2, wait=domcontentloaded)
+[19:43:16] [browser] [INFO] Page loaded: https://winner.rw/en/sportsbook/upcoming
+[19:43:16] [browser] [INFO] Selector "body" found immediately via page.$()
+[19:43:26] [login] [INFO] Dashboard signal found: "[class*="balance"]" is visible
+[19:43:26] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, loginLink=false, confidence=high
+[19:43:26] [login] [INFO] Session is valid — dashboard elements detected on homepage
+  ✔ Dashboard elements detected — user is authenticated
+
+STEP 8
+Action: Checking login state
+Status: success
+Details: User is already authenticated, skipping login page entirely
+
+
+STEP 9
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[19:43:26] [runner] [INFO] Navigating to Aviator game...
+[19:43:26] [login] [INFO] Navigating to Aviator game...
+[19:43:26] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[19:43:26] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[19:43:30] [login] [INFO] Waiting for game canvas to initialize...
+[19:43:35] [login] [INFO] Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+  ✔ Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+
+STEP 10
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/virtual/crash-games/aviator
+
+
+STEP 11
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[19:43:35] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... [20:15:42] [runner] [INFO] Shutting down bot...
+[20:15:42] [browser] [INFO] Browser context closed
+[20:15:43] [browser] [INFO] Browser process terminated
+[20:15:43] [browser] [INFO] Browser resources released
+[20:15:43] [runner] [INFO] Bot terminated.
+[20:15:52] [runner] [INFO] Starting bot for phone *****2954 (headless=false)
+
+STEP 1
+Action: Cleaning round history
+Status: running
+Details: Normalizing values, removing duplicates, ensuring ML-ready format
+[20:15:52] [scraper] [INFO] History cleaned: 60 -> 60 records
+  ℹ Data quality: 60 records clean, no duplicates found
+
+STEP 2
+Action: Cleaning round history
+Status: success
+Details: History normalized: 60 records (removed 0 duplicates)
+
+
+STEP 3
+Action: Launching browser session
+Status: running
+Details: Starting Playwright with system Chrome (headless=false)
+[20:15:52] [runner] [INFO] Launching browser...
+[20:15:52] [browser] [INFO] Using bot profile at /home/diolo/Desktop/winner predict/data/bot/chrome-profile
+[20:15:52] [browser] [INFO] Launching Chromium (headless=false, persistence=profile)
+[20:15:55] [browser] [INFO] Browser launched successfully
+
+STEP 4
+Action: Launching browser session
+Status: success
+Details: Browser session ready with Chrome profile + stealth mode
+
+
+STEP 5
+Action: Opening browser page
+Status: running
+Details: Creating new page tab in browser context
+
+STEP 6
+Action: Opening browser page
+Status: success
+Details: Page tab ready
+
+
+STEP 7
+Action: Checking login state
+Status: running
+Details: Detecting session cookies and dashboard UI indicators on homepage
+[20:15:55] [login] [INFO] Checking existing session...
+[20:15:55] [login] [INFO] Navigating to homepage (https://winner.rw) to check session...
+[20:15:55] [browser] [INFO] Navigating to: https://winner.rw (attempt 1, wait=load)
+[20:16:20] [browser] [INFO] Page loaded: https://winner.rw/sportsbook/upcoming
+[20:16:20] [browser] [INFO] Selector "body" found immediately via page.$()
+[20:16:21] [login] [INFO] Dashboard signal found: "[class*="balance"]" is visible
+[20:16:21] [login] [INFO] Page state: loginPage=false, dashboard=true, loginForm=false, loginLink=false, confidence=high
+[20:16:21] [login] [INFO] Session is valid — dashboard elements detected on homepage
+  ✔ Dashboard elements detected — user is authenticated
+
+STEP 8
+Action: Checking login state
+Status: success
+Details: User is already authenticated, skipping login page entirely
+
+
+STEP 9
+Action: Navigating to Aviator game
+Status: running
+Details: Clicking Aviator link from homepage navigation bar
+[20:16:21] [runner] [INFO] Navigating to Aviator game...
+[20:16:21] [login] [INFO] Navigating to Aviator game...
+[20:16:21] [login] [INFO] Already on winner.rw — looking for "Aviator" link on current page
+[20:16:22] [login] [INFO] Clicking "Aviator" link: /en/virtual/crash-games/aviator
+[20:16:26] [login] [INFO] Waiting for game canvas to initialize...
+[20:16:31] [login] [INFO] Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+  ✔ Aviator page loaded: https://winner.rw/en/virtual/crash-games/aviator
+
+STEP 10
+Action: Navigating to Aviator game
+Status: success
+Details: Game page loaded at https://winner.rw/en/virtual/crash-games/aviator
+
+
+STEP 11
+Action: Preparing monitoring loop
+Status: running
+Details: Awaiting signal to start round data collection
+[20:16:32] [runner] [INFO] Waiting for user confirmation to start scraping...
+Press ENTER to continue scraping... 

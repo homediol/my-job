@@ -1,0 +1,63 @@
+2026/06/14-19:42:40.724 1efb0 Reusing MANIFEST /home/diolo/Desktop/winner predict/data/bot/chrome-profile/Default/Local Storage/leveldb/MANIFEST-000001
+2026/06/14-19:42:40.741 1efb0 Recovering log #119
+2026/06/14-19:42:40.743 1efb0 Reusing old log /home/diolo/Desktop/winner predict/data/bot/chrome-profile/Default/Local Storage/leveldb/000119.log 
+2026/06/14-19:47:17.786 1efb2 Level-0 table #123: started
+2026/06/14-19:47:17.915 1efb2 Level-0 table #123: 836931 bytes OK
+2026/06/14-19:47:18.056 1efb2 Delete type=0 #119
+2026/06/14-19:49:26.325 1efb2 Level-0 table #125: started
+2026/06/14-19:49:26.370 1efb2 Level-0 table #125: 91208 bytes OK
+2026/06/14-19:49:26.549 1efb2 Delete type=0 #122
+2026/06/14-19:49:26.549 1efb2 Compacting 4@0 + 1@1 files
+2026/06/14-19:49:26.668 1efb2 Generated table #126@0: 68 keys, 936789 bytes
+2026/06/14-19:49:26.668 1efb2 Compacted 4@0 + 1@1 files => 936789 bytes
+2026/06/14-19:49:26.994 1efb2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/06/14-19:49:26.995 1efb2 Delete type=2 #118
+2026/06/14-19:49:26.995 1efb2 Delete type=2 #123
+2026/06/14-19:49:26.995 1efb2 Delete type=2 #116
+2026/06/14-19:49:26.995 1efb2 Delete type=2 #125
+2026/06/14-19:49:26.995 1efb2 Delete type=2 #120
+2026/06/14-19:52:26.324 1efb2 Level-0 table #128: started
+2026/06/14-19:52:26.488 1efb2 Level-0 table #128: 92171 bytes OK
+2026/06/14-19:52:26.525 1efb2 Delete type=0 #124
+2026/06/14-19:55:26.326 1efb2 Level-0 table #130: started
+2026/06/14-19:55:26.362 1efb2 Level-0 table #130: 89589 bytes OK
+2026/06/14-19:55:26.642 1efb2 Delete type=0 #127
+2026/06/14-19:58:26.324 1efb2 Level-0 table #132: started
+2026/06/14-19:58:26.413 1efb2 Level-0 table #132: 89514 bytes OK
+2026/06/14-19:58:26.570 1efb2 Delete type=0 #129
+2026/06/14-20:01:26.325 1efb2 Level-0 table #134: started
+2026/06/14-20:01:26.447 1efb2 Level-0 table #134: 91299 bytes OK
+2026/06/14-20:01:26.681 1efb2 Delete type=0 #131
+2026/06/14-20:01:26.682 1efb0 Compacting 4@0 + 1@1 files
+2026/06/14-20:01:26.787 1efb0 Generated table #135@0: 68 keys, 935508 bytes
+2026/06/14-20:01:26.788 1efb0 Compacted 4@0 + 1@1 files => 935508 bytes
+2026/06/14-20:01:26.963 1efb0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/06/14-20:01:26.965 1efb0 Delete type=2 #130
+2026/06/14-20:01:26.965 1efb0 Delete type=2 #126
+2026/06/14-20:01:26.965 1efb0 Delete type=2 #128
+2026/06/14-20:01:26.965 1efb0 Delete type=2 #132
+2026/06/14-20:01:26.965 1efb0 Delete type=2 #134
+2026/06/14-20:04:26.324 1efb2 Level-0 table #137: started
+2026/06/14-20:04:26.398 1efb2 Level-0 table #137: 89917 bytes OK
+2026/06/14-20:04:26.509 1efb2 Delete type=0 #133
+2026/06/14-20:07:26.332 1efb2 Level-0 table #139: started
+2026/06/14-20:07:26.370 1efb2 Level-0 table #139: 90258 bytes OK
+2026/06/14-20:07:26.634 1efb2 Delete type=0 #136
+2026/06/14-20:09:26.365 1efb0 Level-0 table #141: started
+2026/06/14-20:09:26.400 1efb0 Level-0 table #141: 58903 bytes OK
+2026/06/14-20:09:26.688 1efb0 Delete type=0 #138
+2026/06/14-20:11:26.324 1efb2 Level-0 table #143: started
+2026/06/14-20:11:26.550 1efb2 Level-0 table #143: 59046 bytes OK
+2026/06/14-20:11:26.780 1efb2 Delete type=0 #140
+2026/06/14-20:11:26.781 1efb2 Compacting 4@0 + 1@1 files
+2026/06/14-20:11:26.923 1efb2 Generated table #144@0: 68 keys, 937130 bytes
+2026/06/14-20:11:26.923 1efb2 Compacted 4@0 + 1@1 files => 937130 bytes
+2026/06/14-20:11:27.184 1efb2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/06/14-20:11:27.186 1efb2 Delete type=2 #137
+2026/06/14-20:11:27.186 1efb2 Delete type=2 #135
+2026/06/14-20:11:27.187 1efb2 Delete type=2 #143
+2026/06/14-20:11:27.187 1efb2 Delete type=2 #141
+2026/06/14-20:11:27.187 1efb2 Delete type=2 #139
+2026/06/14-20:14:26.324 1efb2 Level-0 table #146: started
+2026/06/14-20:14:26.385 1efb2 Level-0 table #146: 88283 bytes OK
+2026/06/14-20:14:26.502 1efb2 Delete type=0 #142

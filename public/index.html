@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bot Controller</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 520px;
+      max-width: 94vw;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: .25rem;
+      color: #38bdf8;
+    }
+    .subtitle {
+      color: #94a3b8;
+      font-size: .85rem;
+      margin-bottom: 1.5rem;
+    }
+    .controls {
+      display: flex;
+      gap: .75rem;
+      margin-bottom: 1.25rem;
+    }
+    button {
+      flex: 1;
+      padding: .7rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .95rem;
+      cursor: pointer;
+      transition: all .15s ease;
+    }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    .btn-start {
+      background: #22c55e;
+      color: #052e16;
+    }
+    .btn-start:hover:not(:disabled) { background: #16a34a; }
+    .btn-stop {
+      background: #ef4444;
+      color: #450a0a;
+    }
+    .btn-stop:hover:not(:disabled) { background: #dc2626; }
+    .btn-status {
+      background: #334155;
+      color: #e2e8f0;
+    }
+    .btn-status:hover:not(:disabled) { background: #475569; }
+    .status-bar {
+      background: #0f172a;
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .9rem;
+    }
+    .indicator {
+      display: inline-block;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      margin-right: .5rem;
+    }
+    .indicator.idle { background: #64748b; }
+    .indicator.running { background: #22c55e; animation: pulse 1.2s infinite; }
+    .indicator.error { background: #ef4444; }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); }
+      50% { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
+    }
+    .log-box {
+      background: #0f172a;
+      border-radius: 8px;
+      padding: .75rem;
+      height: 200px;
+      overflow-y: auto;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: .8rem;
+      line-height: 1.5;
+    }
+    .log-box .empty {
+      color: #64748b;
+      font-style: italic;
+    }
+    .log-entry { border-bottom: 1px solid #1e293b; padding: 2px 0; }
+    .log-step { color: #38bdf8; }
+    .log-error { color: #f87171; }
+    .log-ok   { color: #4ade80; }
+    .log-info { color: #94a3b8; }
+    .toast {
+      position: fixed; bottom: 1.5rem; right: 1.5rem;
+      background: #1e293b; color: #e2e8f0;
+      padding: .75rem 1.25rem; border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.5);
+      font-size: .9rem;
+      opacity: 0; transform: translateY(12px);
+      transition: all .25s ease;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast.error { border-left: 4px solid #ef4444; }
+    .toast.success { border-left: 4px solid #22c55e; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Bot Controller</h1>
+  <p class="subtitle">Unified orchestration &middot; Node.js + Python</p>
+
+  <div class="controls">
+    <button class="btn-start"  id="btnStart"  onclick="startBot()">Start</button>
+    <button class="btn-stop"   id="btnStop"   onclick="stopBot()">Stop</button>
+    <button class="btn-status" id="btnStatus" onclick="fetchStatus()">Status</button>
+  </div>
+
+  <div class="status-bar">
+    <span><span class="indicator idle" id="indicator"></span><span id="statusText">Idle</span></span>
+    <span id="lockDisplay" style="color:#64748b;font-size:.8rem"></span>
+  </div>
+
+  <div class="log-box" id="logBox">
+    <div class="empty">Waiting for action…</div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Helpers ────────────────────────────────────────────────────────────────
+
+const API = {
+  start:  "/bot/start",
+  stop:   "/bot/stop",
+  status: "/bot/status",
+};
+
+function toast(msg, type) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.className = "toast " + (type || "") + " show";
+  setTimeout(() => el.classList.remove("show"), 3000);
+}
+
+function logLine(text, className) {
+  const box = document.getElementById("logBox");
+  // Remove empty placeholder
+  const empty = box.querySelector(".empty");
+  if (empty) empty.remove();
+
+  const div = document.createElement("div");
+  div.className = "log-entry" + (className ? " " + className : "");
+  div.textContent = text;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+
+function updateUI(state) {
+  const indicator = document.getElementById("indicator");
+  const statusText = document.getElementById("statusText");
+  const lockDisplay = document.getElementById("lockDisplay");
+  const btnStart = document.getElementById("btnStart");
+  const btnStop = document.getElementById("btnStop");
+
+  indicator.className = "indicator " + (state.running ? "running" : "idle");
+  statusText.textContent = state.running ? "Running" : "Idle";
+  lockDisplay.textContent = state.lockExists ? "bot.lock present" : "";
+  btnStart.disabled = state.running;
+  btnStop.disabled  = !state.running;
+}
+
+// ── API Calls (only these 3 endpoints) ──────────────────────────────────────
+
+async function startBot() {
+  try {
+    logLine(">>> POST /bot/start", "log-info");
+    const res = await fetch(API.start, { method: "POST" });
+    const data = await res.json();
+
+    if (res.status === 409) {
+      logLine("409 — Bot is already running", "log-error");
+      toast("Bot is already running", "error");
+    } else {
+      logLine("Bot started — " + data.message, "log-ok");
+      toast("Bot started", "success");
+    }
+    await fetchStatus();
+  } catch (err) {
+    logLine("Error: " + err.message, "log-error");
+    toast("Network error", "error");
+  }
+}
+
+async function stopBot() {
+  try {
+    logLine(">>> POST /bot/stop", "log-info");
+    const res = await fetch(API.stop, { method: "POST" });
+    const data = await res.json();
+    logLine("Bot stopped — " + data.message, "log-error");
+    toast("Bot stopped", "success");
+    await fetchStatus();
+  } catch (err) {
+    logLine("Error: " + err.message, "log-error");
+    toast("Network error", "error");
+  }
+}
+
+async function fetchStatus() {
+  try {
+    const res = await fetch(API.status);
+    const data = await res.json();
+    updateUI(data);
+    return data;
+  } catch (err) {
+    logLine("Status error: " + err.message, "log-error");
+  }
+}
+
+// ── Polling for real-time status ────────────────────────────────────────────
+// The frontend reads status via /bot/status — never touches bot process directly.
+let pollInterval = null;
+
+async function pollLoop() {
+  const state = await fetchStatus();
+  if (state && state.running) {
+    logLine("Bot is active — awaiting completion…", "log-info");
+  } else {
+    if (pollInterval) {
+      clearInterval(pollInterval);
+      pollInterval = null;
+      logLine("Bot finished.", "log-ok");
+    }
+  }
+}
+
+// Override startBot to also begin polling
+const _origStart = startBot;
+startBot = async function() {
+  await _origStart();
+  if (pollInterval) clearInterval(pollInterval);
+  pollInterval = setInterval(pollLoop, 2000);
+};
+
+// Initial load
+fetchStatus();
+</script>
+</body>
+</html>
+
